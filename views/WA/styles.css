@@ -1,0 +1,27 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    height: 100%;
+}
+
+#wordCloud {
+    width: 90vw;
+    height: 100vh;
+    overflow: visible;
+}
+.gradient-text {
+    font-family: "Roboto", sans-serif;
+    background: linear-gradient(to top right, #4e80cb, #66ff01);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#wordInput{
+    border-radius: 25px;
+}
+#submit{
+    border-radius: 25px;
+}

@@ -1,0 +1,29 @@
+.marketing-header {
+    padding: 3rem 1.5rem;
+    background-color: black;
+}
+.marketing-header h1 {
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.product-feature {
+    margin-bottom: 2rem;
+}
+.product-feature h2 {
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.product-feature img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+.product-row {
+    margin-bottom: 2rem;
+}
+.footer {
+    padding: 2rem 1rem;
+    background-color: #343a40;
+    color: #fff;
+    text-align: center;
+}

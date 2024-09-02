@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <style>
+    h2, p {
+      display: inline;
+    }
+    body {
+        background-color: black;
+        background-repeat:no-repeat;
+        background-size:cover;
+        background-position:center;
+    }
+    .feature-icon {
+      width: 4rem;
+      height: 4rem;
+      border-radius: 0.75rem;
+    }
+    .gradient-text {
+        font-family: "Roboto", sans-serif;
+        background: linear-gradient(to top right, #4e80cb, #e48e4d);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    h2{
+        font-family: "Roboto", sans-serif;
+    }
+    @media (prefers-color-scheme: light) {
+    body{
+      background-color: var(--bg-light) !important;
+    }
+      .bg-dark{
+      background-color: var(--bg-light) !important;
+      color: var(--bg-dark) !important;
+    }
+    .navbar{
+        background-color: var(--bg-light) !important;
+    }
+    .navbar-dark{
+        background-color: var(--bg-light) !important;
+    }
+    .container-fluid{
+        background-color: var(--bg-light) !important;
+    }
+    .navbar-nav{
+        background-color: var(--bg-light) !important;
+    }
+    .nav-link{
+      color: var(--bg-dark) !important;
+    }
+    .text-light{
+      color: var(--bg-dark) !important;
+    }
+    
+}
+    
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg bg-dark border-bottom">
+    <div class="container-fluid bg-dark">
+      <a class="navbar-brand navbar-dark bg-dark" href="../docs/index.html"><img src="./public/DarkRager.png" id="Rager" alt="Rager logo" height="30"></a>
+      <button class="navbar-toggler navbar-dark bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse navbar-dark bg-dark" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 bg-dark">
+          <li class="nav-item">
+            <!--<a class="nav-link active" aria-current="page" href="#">Home</a>-->
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./academics.html">Academics</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./project.html">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./travel.html">Travel</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Links
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="https://www.fiverr.com/sarager56">Fiverr</a></li><!-- Edit Links-->
+              <li><a class="dropdown-item" href="https://github.com/56sarager">GitHub</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="https://www.instagram.com/serhodes99/">Instagram</a></li>
+            </ul>
+          </li>
+        </ul>
+        <!--<form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        </form>-->
+      </div>
+    </div>
+  </nav>
+  <h2 class="text-light">Word Association</h2>
+  <p class="text-inline">&emsp; &emsp;Notes: The flutter version is not interactive because this website is hosted
+    on GitHub and it uses the Merriam-Webster API. The flutter version is stylistically more appealing and provides
+  more diverse word associations, but is clunky and freezes after about 60 user entered words. The html version below
+is interactive and does not freeze but it is more spartan and its word associations are less unique.</p>
+  <section class="container-fluid">
+    <video autoplay controls loop muted class="mx-5 px-5 pb-5" width="95%" height="600px" controls>
+      <source src="./public/Flutter-WA.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+    </video>
+  <iframe class="pdf px-5" src="http://127.0.0.1:3000/views/WA/index.html" width="100%" height="600px"></iframe>
+  </section>
+  <h2 class="text-light">Neutron Irradiation</h2>
+  <section class="container-fluid">
+  <iframe class="pdf px-5 pb-5" src="./public/Samuel Rager- NI.pdf" width="100%" height="600px"></iframe>
+  </section>
+  <h2 class="text-light">Quantum Eraser</h2>
+  <section class="container-fluid">
+  <iframe class="pdf px-5 pb-5" src="./public/PHYS3112_Quantum_Eraser.pdf" width="100%" height="600px"></iframe>
+  </section>
+
+  <div class="container">
+    <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+      <div class="col mb-3">
+        <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+          <svg class="bi me-2" width="40" height="32">
+            <use xlink:href="#bootstrap"></use>
+          </svg>
+        </a>
+        <p class="text-light">Designed by Samuel Rager</p>
+
+    </div>
+
+    <div class="col mb-3">
+
+    </div>
+    <div class="col mb-3">
+
+    </div>
+
+      <div class="col mb-3">
+        <h5 class="text-light">Links</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="https://www.fiverr.com/sarager56" class="nav-link p-0 text-light">Fiverr</a></li>
+          <li class="nav-item mb-2"><a href="https://github.com/56sarager" class="nav-link p-0 text-light">GitHub</a></li>
+          <li class="nav-item mb-2"><a href="https://www.instagram.com/serhodes99/" class="nav-link p-0 text-light">Instagram</a></li>
+        </ul>
+      </div>
+
+      <div class="col mb-3">
+        <h5 class="text-light">Pages</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="./academics.html" class="nav-link p-0 text-light">Academics</a></li>
+          <li class="nav-item mb-2"><a href="./project.html" class="nav-link p-0 text-light">Projects</a></li>
+          <li class="nav-item mb-2"><a href="./travel.html" class="nav-link p-0 text-light">Travel</a></li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous">
+  </script>
+  <script>
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+    document.getElementById("Rager").src="./public/LightRager.jpg";}
+  </script>
+</body>
+
+</html>
