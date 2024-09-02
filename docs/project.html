@@ -71,7 +71,7 @@
   <nav class="navbar navbar-expand-lg bg-dark border-bottom">
     <div class="container-fluid bg-dark">
       <a class="navbar-brand navbar-dark bg-dark" href="./index.html"><img src="./public/DarkRager.png" id="Rager" alt="Rager logo" height="30"></a>
-      <button class="navbar-toggler navbar-dark bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -110,7 +110,7 @@
     </div>
   </nav>
   <h2 class="text-light">Word Association</h2>
-  <p class="text-inline">&emsp; &emsp;Notes: The flutter version is not interactive because this website is hosted
+  <p class="text-inline text-light">&emsp; &emsp;Notes: The flutter version is not interactive because this website is hosted
     on GitHub and it uses the Merriam-Webster API. The flutter version is stylistically more appealing and provides
   more diverse word associations, but is clunky and freezes after about 60 user entered words. The html version below
 is interactive and does not freeze but it is more spartan and its word associations are less unique.</p>
@@ -119,7 +119,7 @@ is interactive and does not freeze but it is more spartan and its word associati
       <source src="./public/Flutter-WA.mp4" type="video/mp4">
     Your browser does not support the video tag.
     </video>
-  <iframe class="pdf px-5" src="http://127.0.0.1:3000/views/WA/index.html" width="100%" height="600px"></iframe>
+  <iframe id="html" class="pdf px-5" src="http://127.0.0.1:3000/views/WA/index.html" width="100%" height="600px"></iframe>
   </section>
   <h2 class="text-light">Neutron Irradiation</h2>
   <section class="container-fluid">
@@ -174,7 +174,13 @@ is interactive and does not freeze but it is more spartan and its word associati
   </script>
   <script>
   if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-    document.getElementById("Rager").src="./public/LightRager.jpg";}
+    document.getElementById("Rager").src="./public/LightRager.jpg";};
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    document.getElementById("Rager").src="./public/DarkRager.png";};
+  var md = new MobileDetect(window.navigator.userAgent);
+  if (md.mobile() || md.tablet()) {
+    document.getElementById('html').remove();
+  };
   </script>
 </body>
 

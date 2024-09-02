@@ -64,7 +64,7 @@
   <nav class="navbar navbar-expand-lg bg-dark border-bottom">
     <div class="container-fluid bg-dark">
       <a class="navbar-brand navbar-dark bg-dark" href="./index.html"><img id="Rager" src="./public/DarkRager.png" alt="Rager logo" height="30"></a>
-      <button class="navbar-toggler navbar-dark bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -907,7 +907,7 @@
 <div class="offcanvas offcanvas-end bg-dark text-light border-light w-25" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
   <div class="offcanvas-header">
     <h1 id="offcanvasRightLabel">Temp</h1>
-    <button id="close" type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <button id="close" type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div id="offcanvas-body">
 
@@ -918,8 +918,13 @@
   <script>
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
       document.getElementById("Rager").src="./public/LightRager.jpg";
-      document.getElementById("close").classList.remove('btn-close-white');
-}
+      try {document.getElementById("close").classList.remove('btn-close-white');}
+      catch(error) {};
+};
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  document.getElementById("Rager").src="./public/DarkRager.png";
+  document.getElementById("close").classList.add('btn-close-white');};
+
     document.getElementById('tooltip').style.visibility = 'hidden';
     document.getElementById('tooltip').addEventListener('wheel', () => {
         document.getElementById('tooltip').style.visibility = 'hidden'; 

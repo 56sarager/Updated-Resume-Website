@@ -58,7 +58,6 @@
     .text-light{
       color: var(--bg-dark) !important;
     }
-    
 }
     
   </style>
@@ -69,7 +68,7 @@
   <nav class="navbar navbar-expand-lg bg-dark border-bottom">
     <div class="container-fluid bg-dark">
       <a class="navbar-brand navbar-dark bg-dark" href="./index.html"><img src="./public/DarkRager.png" id="Rager" alt="Rager logo" height="30"></a>
-      <button class="navbar-toggler navbar-dark bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -183,6 +182,8 @@
   <script>
   if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
     document.getElementById("Rager").src="./public/LightRager.jpg";}
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.getElementById("Rager").src="./public/DarkRager.png";};
   </script>
 </body>
 
