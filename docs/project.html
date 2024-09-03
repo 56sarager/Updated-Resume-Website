@@ -40,6 +40,13 @@
     #LightRager {
       display: none;
 }
+    .navbar-toggler-icon-light {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='black' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        }
+
+    .navbar-toggler-icon-dark {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        }
     @media (prefers-color-scheme: light) {
     body{
       background-color: var(--bg-light) !important;
@@ -187,6 +194,22 @@ is interactive and does not freeze but it is more spartan and its word associati
     crossorigin="anonymous">
   </script>
   <script>
+  function setTogglerIconColor() {
+            const togglerIcon = document.querySelector('.navbar-toggler-icon');
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                togglerIcon.classList.remove('navbar-toggler-icon-light');
+                togglerIcon.classList.add('navbar-toggler-icon-dark');
+            } else {
+                togglerIcon.classList.remove('navbar-toggler-icon-dark');
+                togglerIcon.classList.add('navbar-toggler-icon-light');
+            }
+        }
+
+        // Initial check
+        setTogglerIconColor();
+
+        // Listen for changes in dark mode preference
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', setTogglerIconColor);
   var md = new MobileDetect(window.navigator.userAgent);
   if (md.mobile() || md.tablet()) {
     document.getElementById('html').remove();
