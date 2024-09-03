@@ -28,6 +28,12 @@
   outline: none;
   box-shadow: none;
   }
+      #DarkRager {
+      display: block;
+}
+    #LightRager {
+      display: none;
+}
   @media (prefers-color-scheme: light) {
     .bg-dark{
       background-color: var(--bg-light) !important;
@@ -56,6 +62,12 @@
     #offcanvasRight{
       background-color: white !important;
     }
+        #DarkRager {
+      display: none;
+}
+    #LightRager {
+      display: block;
+}
     
 }
 </style>
@@ -63,7 +75,9 @@
 <body class="bg-dark">
   <nav class="navbar navbar-expand-lg bg-dark border-bottom">
     <div class="container-fluid bg-dark">
-      <a class="navbar-brand navbar-dark bg-dark" href="./index.html"><img id="Rager" src="./public/DarkRager.png" alt="Rager logo" height="30"></a>
+      <a class="navbar-brand navbar-dark bg-dark" href="./index.html">
+        <img  src="./public/DarkRager.png" id="DarkRager" alt="Rager logo" height="30">
+        <img  src="./public/LightRager.jpg" id="LightRager" alt="Rager logo" height="30"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -917,7 +931,6 @@
   <h2 id="stotal-count" class="stotal-count text-light text-end position-relative fixed-bottom">Total States: </h2>
   <script>
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-      document.getElementById("Rager").src="./public/LightRager.jpg";
       try {document.getElementById("close").classList.remove('btn-close-white');}
       catch(error) {};
 };
