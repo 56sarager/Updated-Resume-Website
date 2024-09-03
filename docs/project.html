@@ -47,6 +47,12 @@
     .navbar-toggler-icon-dark {
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
         }
+    .accordion-button {
+    background-color: black;
+    box-shadow: none;
+    border-color: rgba(0,0,0,.125);
+    color: var(--bg-light);
+    } 
     @media (prefers-color-scheme: light) {
     body{
       background-color: var(--bg-light) !important;
@@ -79,6 +85,12 @@
     #LightRager {
       display: block;
 }
+    .accordion-button {
+    background-color: white;
+    box-shadow: none;
+    border-color: rgba(0,0,0,.125);
+    color: var(--bg-dark);
+    } 
     
 }
     
@@ -130,26 +142,54 @@
       </div>
     </div>
   </nav>
-  <h2 class="text-light">Word Association</h2>
-  <p class="text-inline text-light">&emsp; &emsp;Notes: The flutter version is not interactive because this website is hosted
-    on GitHub and it uses the Merriam-Webster API. The flutter version is stylistically more appealing and provides
-  more diverse word associations, but is clunky and freezes after about 60 user entered words. The html version below
-is interactive and does not freeze but it is more spartan and its word associations are less unique.</p>
-  <section class="container-fluid">
-    <video autoplay controls loop muted class="mx-5 px-5 pb-5" width="95%" height="600px" controls>
-      <source src="./public/Flutter-WA.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-    </video>
-  <iframe id="html" class="pdf px-5" src="http://127.0.0.1:3000/views/WA/index.html" width="100%" height="600px"></iframe>
-  </section>
-  <h2 class="text-light">Neutron Irradiation</h2>
-  <section class="container-fluid">
-  <iframe class="pdf px-5 pb-5" src="./public/Samuel Rager- NI.pdf" width="100%" height="600px"></iframe>
-  </section>
-  <h2 class="text-light">Quantum Eraser</h2>
-  <section class="container-fluid">
-  <iframe class="pdf px-5 pb-5" src="./public/PHYS3112_Quantum_Eraser.pdf" width="100%" height="600px"></iframe>
-  </section>
+   <div class="accordion accordion-flush" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          <h2 class="gradient-text">Word Association</h2>
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div class="accordion-body bg-dark">
+          <p class="text-inline text-light">&emsp; &emsp;Note: The flutter version is not interactive because this website is hosted
+            on GitHub and it uses the Merriam-Webster API. The flutter version is stylistically more appealing and provides
+          more diverse word associations, but is clunky and freezes after about 60 user entered words. The html version below
+        is interactive and does not freeze but it is more spartan and its word associations are less unique.</p>
+          <section class="container-fluid">
+            <video autoplay controls loop muted class="mx-5 px-5 pb-5" width="95%" height="600px" controls>
+              <source src="./public/Flutter-WA.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video>
+          <iframe id="html" class="pdf px-5" src="http://127.0.0.1:3000/views/WA/index.html" width="100%" height="600px"></iframe>
+          </section>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          <h2 class="gradient-text">Neutron Irradiation</h2>
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+        <div class="accordion-body bg-dark">
+          <iframe class="pdf px-5 pb-5" src="./public/Samuel Rager- NI.pdf" width="100%" height="600px"></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          <h2 class="gradient-text">Quantum Eraser</h2>
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+        <div class="accordion-body bg-dark">
+          <iframe class="pdf px-5 pb-5" src="./public/PHYS3112_Quantum_Eraser.pdf" width="100%" height="600px"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="container">
     <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
