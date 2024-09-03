@@ -53,6 +53,11 @@
     border-color: rgba(0,0,0,.125);
     color: var(--bg-light);
     } 
+    @media only screen and (max-width: 768px) {
+    #html {
+        display: none;
+    }
+}
     @media (prefers-color-scheme: light) {
     body{
       background-color: var(--bg-light) !important;
@@ -154,7 +159,8 @@
           <p class="text-inline text-light">&emsp; &emsp;Note: The flutter version is not interactive because this website is hosted
             on GitHub and it uses the Merriam-Webster API. The flutter version is stylistically more appealing and provides
           more diverse word associations, but is clunky and freezes after about 60 user entered words. The html version below
-        is interactive and does not freeze but it is more spartan and its word associations are less unique.</p>
+        is interactive and does not freeze but it is more spartan, its word associations are less unique, and it does not
+            load in mobile browsers.</p>
           <section class="container-fluid">
             <video autoplay controls loop muted class="mx-5 px-5 pb-5" width="95%" height="600px" controls>
               <source src="./public/Flutter-WA.mp4" type="video/mp4">
