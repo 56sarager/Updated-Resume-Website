@@ -34,6 +34,12 @@
     h2{
         font-family: "Roboto", sans-serif;
     }
+        #DarkRager {
+      display: block;
+}
+    #LightRager {
+      display: none;
+}
     @media (prefers-color-scheme: light) {
     body{
       background-color: var(--bg-light) !important;
@@ -60,6 +66,12 @@
     .text-light{
       color: var(--bg-dark) !important;
     }
+          #DarkRager {
+      display: none;
+}
+    #LightRager {
+      display: block;
+}
     
 }
     
@@ -70,7 +82,9 @@
 
   <nav class="navbar navbar-expand-lg bg-dark border-bottom">
     <div class="container-fluid bg-dark">
-      <a class="navbar-brand navbar-dark bg-dark" href="./index.html"><img src="./public/DarkRager.png" id="Rager" alt="Rager logo" height="30"></a>
+    <a class="navbar-brand navbar-dark bg-dark" href="./index.html">
+        <img  src="./public/DarkRager.png" id="DarkRager" alt="Rager logo" height="30">
+        <img  src="./public/LightRager.jpg" id="LightRager" alt="Rager logo" height="30"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -173,10 +187,6 @@ is interactive and does not freeze but it is more spartan and its word associati
     crossorigin="anonymous">
   </script>
   <script>
-  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-    document.getElementById("Rager").src="./public/LightRager.jpg";};
-  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    document.getElementById("Rager").src="./public/DarkRager.png";};
   var md = new MobileDetect(window.navigator.userAgent);
   if (md.mobile() || md.tablet()) {
     document.getElementById('html').remove();
