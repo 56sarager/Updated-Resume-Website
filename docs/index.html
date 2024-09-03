@@ -32,6 +32,12 @@
     #offcanvasTopLabel{
       font-family: "Roboto", sans-serif;
     }
+        #DarkRager {
+      display: block;
+}
+    #LightRager {
+      display: none;
+}
     @media (prefers-color-scheme: light) {
       body {
         background-image: url("./public/LightRager.gif");
@@ -58,6 +64,12 @@
     .text-light{
       color: var(--bg-dark) !important;
     }
+          #DarkRager {
+      display: none;
+}
+    #LightRager {
+      display: block;
+}
 }
     
   </style>
@@ -67,7 +79,9 @@
 
   <nav class="navbar navbar-expand-lg bg-dark border-bottom">
     <div class="container-fluid bg-dark">
-      <a class="navbar-brand navbar-dark bg-dark" href="./index.html"><img src="./public/DarkRager.png" id="Rager" alt="Rager logo" height="30"></a>
+          <a class="navbar-brand navbar-dark bg-dark" href="./index.html">
+        <img  src="./public/DarkRager.png" id="DarkRager" alt="Rager logo" height="30">
+        <img  src="./public/LightRager.jpg" id="LightRager" alt="Rager logo" height="30"></a>
       <button id="navbar-toggler" class="navbar-toggler navbar-dark bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -181,11 +195,9 @@
   </script>
   <script>
   if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-    document.getElementById("Rager").src="./public/LightRager.jpg";
     document.getElementsById("navbar-toggler").classList.remove('navbar-dark');
   document.getElementsById("navbar-toggler").classList.remove('bg-dark');};
   if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      document.getElementById("Rager").src="./public/DarkRager.png";
       document.getElementsById("navbar-toggler").classList.add('navbar-dark');
       document.getElementsById("navbar-toggler").classList.add('bg-dark');};
   </script>
