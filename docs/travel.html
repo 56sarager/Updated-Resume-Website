@@ -960,6 +960,30 @@ if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').match
         var img = document.getElementById("img_"+code);
         img.parentNode.removeChild(img); 
 });
+      document.getElementById(code).addEventListener('touchstart', () => {
+        var position = document.getElementById(code).getBoundingClientRect();
+        var x = position.left;
+        var y = position.bottom;
+        var name = document.getElementById(code).getAttribute('title');
+        document.getElementById('tooltip_text').innerText = name;
+        document.getElementById('tooltip').style.visibility = 'visible'; 
+        document.getElementById('tooltip').style='position:sticky; left:'+x+'px; top:'+y+'px';
+        try {
+        var img = document.createElement("img");
+        img.className += "img-fluid";
+        img.setAttribute("id", "img_"+code);
+        img.setAttribute("alt","")
+        img.src="./public/photos/"+code+".jpg";
+        var loc = document.getElementById("card-body");
+        loc.appendChild(img);}
+        catch(error){
+        };
+});
+      document.getElementById(code).addEventListener('touchend', () => {
+        document.getElementById('tooltip').style.visibility = 'hidden'; 
+        var img = document.getElementById("img_"+code);
+        img.parentNode.removeChild(img); 
+});
     });
     const country_codes2 = ["OH1", "ME1", "FL1", "TN1", "NY1", "AL1", "GA1", "SC1", "NC1", "VT1",
       "NH1", "MI1", "WI1", "IL1", "IN1", "KY1", "PA1", "LA1", "WV1", "NJ1", "MD1", "RI1", "MA1", "MS1",
