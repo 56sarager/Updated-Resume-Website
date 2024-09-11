@@ -944,7 +944,8 @@
 };
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
   document.getElementById("Rager").src="./public/DarkRager.png";
-  document.getElementById("close").classList.add('btn-close-white');};
+  try {document.getElementById("close").classList.add('btn-close-white');}
+      catch(error) {};};
 
     document.getElementById('tooltip').style.visibility = 'hidden';
     document.getElementById('tooltip').addEventListener('wheel', () => {
